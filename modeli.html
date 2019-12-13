@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Ferrari</title>
+	<link rel="shortcut icon" href="assets/img/konj.png" />
+
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet">
+	<link href="https://fonts.googleapis.com/css?family=Quicksand" rel="stylesheet">
+    <link rel="stylesheet" href="assets/css/styles.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script src="assets/js/jquery-3.4.1.min"></script>
+
+    <link rel="stylesheet" type="text/css" href="assets/slick/slick.css"/>
+    <link rel="stylesheet" type="text/css" href="assets/slick/slick-theme.css"/>
+    <script src="assets/js/script.js"></script>
+</head>
+
+
+<body>
+    <header class='onama'>
+		<h2><a href="index.html">Ferrari</a></h2>
+		<nav>
+			<li><a href="index.html">Home</a></li>
+            <li><a href="testvoznja.html">Test vožnja</a></li>
+            <li><a href="narucivanje.html">Naručivanje</a></li>
+			<li><a href="onama.html">Istorija</a></li>
+			<li><a href="modeli.html">Modeli</a></li>
+		</nav>
+	</header>
+    <div class="galerija">
+      <a href="assets/img/488gtb.jpg" ></a><img src="assets/img/488gtb-small.jpg"> </a>
+      <a href="assets/img/488spider.jpg" ></a> <img src="assets/img/488spider-small.jpg"> </a>
+      <a href="assets/img/812.jpg" ></a> <img src="assets/img/812-small.jpg"> </a>
+      <a href="assets/img/apert.jpg" ></a>  <img src="assets/img/aperta-small.jpg"> </a>
+      <a href="assets/img/gtc4lt.jpg" ></a> <img src="assets/img/gtc4lt-small.jpg"> </a>
+      <a href="assets/img/laferrari.jpg" ></a>  <img src="assets/img/laferrari-small.jpg"> </a>
+
+     
+    </div>
+
+
+    <section class="contact">
+            <h3 class="title"> Pretplati se</h3>	
+            <p>Ukoliko želite da Vas obaveštavamo o najzanačajnijim dešavanjima, kao i datumima izbacivanja novih modela i održavanju test vožnji ostavite Vašu e-mail adresu</p>
+            <hr>
+    
+            <form name="News">
+                <input name="Email" type="email" placeholder="Email" value="Unesi email">
+                <input name="dugme" class="btn" type="submit" value="Pošalji" onclick="newsletter()">
+            </form>
+        </section>
+        
+        <footer>
+          <p>Gde se nalazimo?</p>
+            <div id="mape">
+                <div id="li">
+                    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d90919.32527905362!2d10.830493666372817!3d44.5923431975384!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x477fe3a75a0699a7%3A0xb1a1e710282361ef!2sFerrari%20Factory!5e0!3m2!1ssr!2srs!4v1576015788132!5m2!1ssr!2srs" width="600" height="450" frameborder="0" style="border:0;" allowfullscreen=""></iframe>
+                </div>
+                
+                </div>
+                
+                <p>©FON 2019</p>
+                <p id="demo"></p>
+                <script>
+              var d = new Date();
+              document.getElementById("demo").innerHTML = d.toDateString();
+            </script> 
+        </footer>
+
+    <script type="text/javascript" src="//code.jquery.com/jquery-1.11.0.min.js"></script>
+    <script type="text/javascript" src="//code.jquery.com/jquery-migrate-1.2.1.min.js"></script>
+    <script type="text/javascript" src="//code.jquery.com/jquery-3-4-1.js"></script>
+    
+
+</body>
+</html>

@@ -1,0 +1,126 @@
+<!doctype html>
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Ferrari</title>
+	<link rel="shortcut icon" href="assets/img/konj.png" />
+
+  <link href="https://fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css?family=Quicksand" rel="stylesheet">
+  <link rel="stylesheet" href="assets/css/styles.css">
+  <script src="assets/js/script.js"></script>
+  <script>
+			function validateEmail(emailField){
+		        var reg = /^([a-z0-A-Z9_\-\.])+\@([A-Za-z0-9_\-\.])+\.([A-Za-z]{2,4})$/;
+
+		        if (reg.test(emailField.value) == false || emailField.value==null || emailField.value=="") 
+		        {
+		            alert('Pogrešna E-mail Adresa!');
+		            return false;
+		    	}
+        		return true;
+			}
+    </script>
+    <script>
+        function validate()
+          {
+               if(document.FormaKontakt.details.value == '') 
+               {      
+              alert("Niste Uneli Pitanje!");
+                document.FormaKontakt.details.focus();
+              return false;       
+              }
+               else if(document.FormaKontakt.name.value == '')
+               {      
+              alert("Niste Uneli Ime!");
+                document.FormaKontakt.name.focus();
+              return false;       
+              }
+               else{
+                 alert('Uspešno Ste rezervisali test vožnju!');
+                 return true;
+             }
+          }
+      </script>
+</head>
+
+<body>
+  <header class='onama'>
+		<h2><a href="index.html">Ferrari</a></h2>
+		<nav>
+			<li><a href="index.html">Home</a></li>
+            <li><a href="testvoznja.html">Test vožnja</a></li>
+            <li><a href="narucivanje.html">Naručivanje</a></li>
+			<li><a href="onama.html">Istorija</a></li>
+			<li><a href="modeli.html">Modeli</a></li>
+		</nav>
+	</header>
+
+<div class="forma-glavna">
+  
+  <form name="FormaKontakt" id="FormaKontakt" onsubmit="return validate();">
+    <ul class="forma-polje">
+      <br><br><br><br><br>
+      <li>
+        <label for="ime">Ime</label>
+        <input type="text" id="name" name="name" placeholder="Vaše ime" required>
+      </li>
+      <li>
+        <label for="prezime">Prezime</label>
+			  <input type="text" id="prezime" name="prezime" placeholder="Vaše Prezime">
+      </li>
+      <li>
+        <label for="email">E-mail</label>
+        <input type="email" id="email" name="EMail" placeholder="Vaša e-mail adresa" required onblur="validateEmail(this);">
+      </li>
+      <li>
+      <label for="region">Region</label>
+			    <select id="region" name="region">
+			      <option value="vojvodina">Vojvodina</option>
+			      <option value="macva">Mačva</option>
+			      <option value="beograd" selected>Beograd</option>
+			      <option value="južnas">Južna Srbija</option>
+			      <option value="kosovo">Kosovo</option>
+          </select>
+      </li>
+      <li>
+        <label for="telefon">Broj telefona</label>
+        <input type="tel" id="telefon" name="Telefon" placeholder="Unesi broj telefona" required>
+      </li>
+      <li>
+          <label for="sadrzaj">Pitanja</label>
+          <textarea name="details" id="details" placeholder="Vaše pitanje..." style="height:200px"></textarea>
+     </li>
+     		 
+       <label class="checkbox-inline" ><input type="checkbox" value="">Da li se slažete da Vas obaveštavamo o najznačajnijim dešavanjima kod nas </label><br>
+    <li>
+
+    </li>
+     
+       <button type="submit" class='btn' onclick="validacija()">Pošalji</button>
+       <input type="reset" value="Izbriši">
+      </li>
+    </ul>
+    
+  </form>
+</div>
+<br>
+<footer>
+  <p>Gde se nalazimo?</p>
+    <div id="mape">
+        <div id="li">
+            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d90919.32527905362!2d10.830493666372817!3d44.5923431975384!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x477fe3a75a0699a7%3A0xb1a1e710282361ef!2sFerrari%20Factory!5e0!3m2!1ssr!2srs!4v1576015788132!5m2!1ssr!2srs" width="600" height="450" frameborder="0" style="border:0;" allowfullscreen=""></iframe>
+        </div>
+        
+        </div>
+        <p>©FON 2019</p>
+        <p id="demo"></p>
+        <script>
+      var d = new Date();
+      document.getElementById("demo").innerHTML = d.toDateString();
+    </script>      
+  
+</footer>
+</form>
+</body>
